@@ -1,0 +1,261 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #262E33;
+}
+
+/*HEADER*/
+
+.logo {
+    width: 15%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: #222324;
+}
+
+.navbar {
+    background-color: #222324;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: #222324;
+    position: absolute;
+    left: 60px;
+    padding: 0;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-color: #222324;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offcanvas {
+    background-color: #1d1f21;
+    color: white;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid #444;
+}
+
+.offcanvas-title {
+    color: white;
+}
+
+.offcanvas-body {
+    padding: 1rem;
+}
+
+.offcanvas .nav-link {
+    color: white;
+}
+
+.offcanvas .nav-link:hover {
+    color: #ccc;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.nav-link {
+    font-size: 20px;
+}
+
+i {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+/* MAIN */
+
+.cro {
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+button[data-setter] {
+    outline: none;
+    background: transparent;
+    border: none;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-size: 18px;
+    width: 25px;
+    height: 30px;
+    color: #17A1FA;
+    cursor: pointer;
+}
+button[data-setter]:hover {
+    opacity: 0.5;
+}
+.setters {
+    margin-bottom: 20px;
+}
+.minutes-set, .seconds-set {
+    display: inline-block;
+    font-size: 40px;
+    margin: 0 25px;
+}
+.controlls {
+    text-align: center;
+}
+.display-remain-time {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 100;
+    font-size: 65px;
+    color: #FFF;
+    margin-bottom: 5px;
+}
+#pause {
+    outline: none;
+    background: transparent;
+    border: none;
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.play::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 22px solid #17A1FA;
+}
+.pause::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 15px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 1px;
+    border: 5px solid #17A1FA;
+    border-top: none;
+    border-bottom: none;
+}
+#pause:hover {
+    opacity: 0.8;
+}
+.e-c-base {
+    fill: none;
+    stroke: #B6B6B6;
+    stroke-width: 4px;
+}
+.e-c-progress {
+    fill: none;
+    stroke:#17A1FA;
+    stroke-width: 4px;
+    transition: stroke-dashoffset 0.7s;
+}
+.e-c-pointer {
+    fill: #FFF;
+    stroke: #17A1FA;
+    stroke-width: 2px;
+}
+#e-pointer {
+    transition: transform 0.7s;
+}
+main hr{
+    border: none;
+    height: 5px;
+    background-color: #FFF;
+    stroke: #FFF;
+    width: 50%;
+    margin: 30px auto 20px;
+    display: block;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 28px;
+    margin-left: 240px;
+    margin-right: 240px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+#icon{
+    margin-right: 40px;
+}
+
+
+
+
+/*FOOTER*/
+
+
+footer {
+    background-color: #222324;
+    padding: 20px 0;
+}
+
+footer hr {
+    border: none;
+    height: 5px;
+    background-color: white;
+    width: 50%;
+    margin: 100px auto 20px;
+    display: block;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto; 
+}
+
+footer .icon {
+    width: 20%;
+    padding: 20px;
+}
+
+footer .gits {
+    display: flex;
+    flex-direction: column;
+    align-items: right; 
+    margin-right: 460px;
+    margin-top: 20px;
+}
+
+footer .gits a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: .4rem;
+}
+
+footer .gits a i {
+    margin-right: 10px;
+}
