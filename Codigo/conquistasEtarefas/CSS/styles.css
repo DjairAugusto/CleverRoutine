@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color, #343a40);
+    color: var(--text-color, #ffffff);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header, .footer {
+    background-color: var(--header-footer-bg, #495057);
+    color: var(--header-footer-text, #ffffff);
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column {
+    margin: 0 40px;
+    position: relative;
+    width: 45%;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    background-color: var(--button-bg, #6c757d);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.task-list li.done {
+    background-color: var(--accent-color-green, #28a745);
+}
+
+.task-list li .task-name {
+    flex-grow: 1;
+}
+
+.task-list li button {
+    background-color: var(--button-bg, #6c757d);
+    color: var(--button-text, #ffffff);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.task-list li button:hover {
+    background-color: var(--button-hover-bg, #5a6268);
+}
+
+.footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-btn {
+    margin: 0 10px;
+}
+
+.toggle-theme-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    background-color: var(--button-bg, #6c757d);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.toggle-theme-label {
+    margin-right: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--button-bg, #ccc);
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: var(--button-bg, #007bff);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+.footer-btn:nth-child(1) {
+    background-color: var(--accent-color-yellow);
+}
+
+.footer-btn:nth-child(2) {
+    background-color: var(--accent-color-blue);
+}
+
+.footer-btn:nth-child(3) {
+    background-color: var(--accent-color-green);
+}
+
+.toggle-theme-container {
+    background-color: var(--accent-color-gray);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.conquista {
+    border: 1px solid #6c757d;
+    border-radius: 12px;
+    width: 80%;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.conquista.desbloqueada {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.mensagem-conquista {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+.mensagem-conquista.show {
+    display: block;
+}

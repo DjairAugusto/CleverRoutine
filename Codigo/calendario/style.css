@@ -1,0 +1,537 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #262E33;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #222324;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #222324;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: #222324;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-color: #222324;
+}
+
+.logo {
+    width: 15%;
+    margin: 20px auto;
+    display: block;
+}
+
+.offcanvas {
+    background-color: #1d1f21;
+    color: white;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid #444;
+}
+
+.offcanvas-title {
+    color: white;
+}
+
+.offcanvas-body {
+    padding: 1rem;
+}
+
+.offcanvas .nav-link {
+    color: white;
+}
+
+.offcanvas .nav-link:hover {
+    color: #ccc;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.nav-link {
+    font-size: 20px;
+}
+
+i {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+  }
+  
+  body {
+    font-family: "Roboto Mono", monospace;
+    background-color: #262E33;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+main hr{
+    border: none;
+    height: 5px;
+    background-color: #FFF;
+    stroke: #FFF;
+    width: 50%;
+    margin: 30px auto 20px;
+    display: block;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 28px;
+    margin-left: 240px;
+    margin-right: 240px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+#icon{
+    margin-right: 40px;
+}
+
+
+/*modal*/
+#criarLembreteModal {
+    color: white; /* Cor do texto */
+    background-color: #000; /* Cor de fundo */
+}
+
+#criarLembreteModal .modal-content {
+    background-color: #1d1f21; /* Cor de fundo do conteúdo do modal */
+}
+
+#criarLembreteModal .modal-body {
+    color: white; /* Cor do texto dentro do modal */
+    background-color: #1d1f21; /* Cor de fundo do corpo do modal */
+}
+
+#criarLembreteModal .modal-title {
+    color: white; /* Cor do título do modal */
+}
+.input {
+    margin-bottom: 15px;
+}
+
+.input label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white; /* Cor do texto das labels */
+}
+
+.input input,
+.input textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white; /* Cor do texto dos inputs e textarea */
+}
+
+.inputChoice {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white; /* Cor do texto dos radio buttons */
+}
+
+.inputChoice p {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.inputChoice label {
+    margin-right: 10px;
+}
+
+.buttonSubmit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttonSubmit button {
+    padding: 10px 20px;
+    background-color: #264b3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonSubmit button:hover {
+    background-color: #1d1f21;
+}
+
+.calendar-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1000px; /* Aumenta o tamanho máximo do calendário */
+    padding: 20px;
+    margin: 100px auto;
+    color: #000;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-weekdays,
+.calendar-days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-weekdays div,
+.calendar-day {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.calendar-day {
+    cursor: pointer;
+    background-color: #fff; /* Fundo branco */
+}
+
+.calendar-day.has-reminder {
+    background-color: #17A1FA;
+    color: white;
+}
+
+.calendar-day:hover {
+    background-color: #17A1FA;
+    color: white;
+}
+
+.empty {
+    background-color: transparent;
+}
+
+button.btn-link {
+    color: #17A1FA;
+    font-size: 1.5rem;
+}
+
+button.btn-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+body{
+    color:#555555;;
+}
+
+.botao {
+    margin-top: 24px;
+}
+
+#criarLembrete {
+    display: flex;
+    flex-direction: column;
+    border: 2px;
+    border-style: solid;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black
+}
+
+
+.lembrete-header {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 2px solid #000;
+}
+
+.lembrete-header div {
+    flex: 1;
+    padding: 5px;
+}
+
+.sistemaCRUD{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #555555;
+}
+
+
+
+.lembrete{
+    border-radius: 10px;
+    border-style: solid;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+
+.strong{
+    font-weight: bolder;
+}
+
+.span{
+    border-radius: 10px;
+    border-style: ridge;
+    margin-bottom: 12px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    border-style: solid;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin: 12px;
+    font-weight: bolder;
+}
+
+.inputChoice{
+    border-radius: 16px;
+    border-style: solid;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin: 12px;
+    font-weight: bolder;
+}
+
+.buttonSubmit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lembrete.concluido {
+    text-decoration: line-through;
+    background-color: #d3d3d3; 
+}
+.cabecalho {
+    background-color: #264b3c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.tela-principal {
+    margin-top: 24px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start; 
+    margin-bottom: 24px;
+}
+
+.conquista {
+    border: 1px solid;
+    border-radius: 12px;
+    width: 40%;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    margin-right: 60px;
+}
+
+.conquistaCompleta {
+    border: 1px solid;
+    border-radius: 12px;
+    width: 60%;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+.ConquistaCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    border: 1px solid;
+    border-radius: 18px;
+    padding: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #264b3c;
+}
+
+button:focus {
+    outline: 2px solid #264b3c;
+}
+
+.btnVoltar1706{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 1px;
+    border-radius: 2px;
+    border-style: solid;
+    width: 64px;
+    height: 20px;
+}
+
+/* Estilo para dias com lembretes */
+/* Estilo para indicar dias com lembretes */
+.calendar-day.has-reminder {
+    background-color: #f0f0f0; /* Cor de fundo */
+    border-radius: 50%; /* Borda circular */
+    color: #333; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    position: relative; /* Para posicionamento do indicador */
+}
+
+/* Indicador visual */
+.calendar-day.has-reminder::before {
+    content: '';
+    position: absolute;
+    top: 6px; /* Posição vertical */
+    right: 6px; /* Posição horizontal */
+    width: 8px; /* Largura */
+    height: 8px; /* Altura */
+    background-color: #ff0000; /* Cor do indicador */
+    border-radius: 50%; /* Borda circular */
+}
+
+
+
+@media (max-width: 768px) {
+    .conquista, .conquistaCompleta {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+}
+
+/*FOOTER*/
+
+
+footer {
+    background-color: #222324;
+    padding: 20px 0;
+    width: 100%; /* Garante que o footer ocupe toda a largura da página */
+    position: relative; /* Para posicionamento absoluto do conteúdo interno */
+}
+
+footer hr {
+    border: none;
+    height: 5px;
+    background-color: white;
+    width: 50%;
+    margin: 20px auto; /* Centraliza horizontalmente e reduz margem superior */
+    display: block;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto; 
+}
+
+footer .icon {
+    width: 20%;
+    padding: 20px;
+}
+
+footer .gits {
+    display: flex;
+    flex-direction: column;
+    align-items: right; 
+    margin-right: 460px;
+    margin-top: 20px;
+}
+
+footer .gits a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: .4rem;
+}
+
+footer .gits a i {
+    margin-right: 10px;
+}
+
