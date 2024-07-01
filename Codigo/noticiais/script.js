@@ -15,8 +15,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
     // APIs
     const API_KEY = "536be7455576480ca8463d7065baf87b";
-    const BASE_URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
-    const SEARCH_URL = `https://newsapi.org/v2/everything?apiKey=${API_KEY}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+
+    fetch(url)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
   
     function fetchNews(newsType) {
       const url = `${BASE_URL}&category=${newsType}`;
