@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     var newsDataArr = [];
 
     // APIs
-    const API_KEY = process.env.NEWS_API_KEY;
+    const API_KEY = '536be7455576480ca8463d7065baf87b'; // Adicione sua chave API diretamente aqui
     const BASE_URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
     const SEARCH_URL = `https://newsapi.org/v2/everything?apiKey=${API_KEY}`;
 
