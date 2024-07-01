@@ -25,48 +25,56 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function fetchNews(newsType) {
         const url = `${BASE_URL}&category=${newsType}`;
         console.log("Fetching news from URL:", url);
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (!data.articles) {
-                    throw new Error("No articles found in response");
-                }
-                newsDataArr = data.articles;
-                displayNews();
-            })
-            .catch(error => {
-                console.log(error);
-                newsdetails.innerHTML = "<h5>Sem dados disponíveis.</h5>";
-            });
+        fetch(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (!data.articles) {
+                throw new Error("No articles found in response");
+            }
+            newsDataArr = data.articles;
+            displayNews();
+        })
+        .catch(error => {
+            console.log(error);
+            newsdetails.innerHTML = "<h5>Sem dados disponíveis.</h5>";
+        });
     }
 
     // Function to fetch news by query
     function fetchQueryNews() {
         if (newsQuery.value == null) return;
         const url = `${SEARCH_URL}&q=${newsQuery.value}`;
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (!data.articles) {
-                    throw new Error("No articles found in response");
-                }
-                newsDataArr = data.articles;
-                displayNews();
-            })
-            .catch(error => {
-                console.log(error);
-                newsdetails.innerHTML = "<h5>Sem dados disponíveis.</h5>";
-            });
+        fetch(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (!data.articles) {
+                throw new Error("No articles found in response");
+            }
+            newsDataArr = data.articles;
+            displayNews();
+        })
+        .catch(error => {
+            console.log(error);
+            newsdetails.innerHTML = "<h5>Sem dados disponíveis.</h5>";
+        });
     }
 
     // Function to display news
