@@ -196,10 +196,10 @@ main hr{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 1000px; /* Aumenta o tamanho máximo do calendário */
+    max-width: 1100px; /* Aumenta o tamanho máximo do calendário */
     padding: 20px;
     margin: 100px auto;
-    margin-top:  80px;
+    margin-top:  140px;
     color: #000;
 }
 
