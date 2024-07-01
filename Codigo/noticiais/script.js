@@ -24,9 +24,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Function to fetch news by category
     function fetchNews(newsType) {
         const url = `${BASE_URL}&category=${newsType}`;
+        console.log("Fetching news from URL:", url);
         fetch(url)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
+                if (!data.articles) {
+                    throw new Error("No articles found in response");
+                }
                 newsDataArr = data.articles;
                 displayNews();
             })
@@ -41,8 +50,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (newsQuery.value == null) return;
         const url = `${SEARCH_URL}&q=${newsQuery.value}`;
         fetch(url)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
+                if (!data.articles) {
+                    throw new Error("No articles found in response");
+                }
                 newsDataArr = data.articles;
                 displayNews();
             })
@@ -55,6 +72,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Function to display news
     function displayNews() {
         newsdetails.innerHTML = "";
+        if (!newsDataArr) {
+            console.log("No news data available to display");
+            return;
+        }
         newsDataArr.forEach(news => {
             var date = news.publishedAt.split("T");
 
